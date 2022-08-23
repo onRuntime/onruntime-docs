@@ -41,3 +41,7 @@ body {
 .dark .dark\:shadow-\[0_-12px_16px_\#111\] {
 	--tw-shadow: 0 -12px 16px #1e1f20 !important;
 }
+
+img[decoding] {
+	border-radius: 0.75rem;
+}
