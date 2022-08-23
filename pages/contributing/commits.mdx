@@ -1,0 +1,141 @@
+import { useSSG } from 'nextra/ssg'
+
+export const getStaticProps = ({ params }) => {
+  return fetch(`https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json`)
+    .then((res) => res.json())
+    .then((data) => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useSSG` hook.
+        ssg: {
+          emojis: data.gitmojis,
+        },
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60,
+    }))
+}
+
+export const Emojis = () => {
+  // Get the data from SSG, and render it as a component.
+  const { emojis } = useSSG()
+  return (
+    <div className={"table-container"}>
+      <table>
+        <thead>
+          <tr>
+            <th>Emoji</th>
+            <th>Code</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {emojis.map((emoji) => (
+            <tr key={emoji.code}>
+              <td style={{ textAlign: 'center' }}>{emoji.emoji}</td>
+              <td>{emoji.code}</td>
+              <td>{emoji.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+# Commits
+
+Many companies don't pay attention to conventional commits, we do, because we like to have a clean project history and workflows to read. Most of us use [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph), an extension that allows us to read our Git history as a graph.
+Our commits convention is inspired by [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0) but customized into something more fun! 😄
+
+## Structure
+
+The commit message should be structured as follows:
+
+```
+<gitmoji> <type> <description> [(#<issue number>)]
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Example:
+
+```bash
+📝 update documentation contributors
+
+- Add @jerembdn as a contributor
+- Add @younesbessa as a contributor
+
+Co-authored-by: Younes Bessa <younes@onruntime.com>
+```
+
+But most of the time we avoid wasting a lot of time on it so it looks more like this:
+
+```bash
+📝 update documentation contributors
+```
+
+## Gitmojis
+
+We use [gitmoji](https://gitmoji.dev) to categorize our commits, it has a good ecosystem and is very easy to use on a daily basis using [these tools](https://gitmoji.dev/related-tools).
+
+Otherwise here is the complete list of these emojis, their code and the description given to them:
+<Emojis />
+
+## Types
+
+We use the following commit types:
+
+| Type       | Description           |
+| ---------- | --------------------- |
+| `add`      | Add a new feature     |
+| `fix`      | Fix a bug             |
+| `improve`  | Improve something     |
+| `update`   | Update something      |
+| `remove`   | Remove something      |
+| `refactor` | Refactor something    |
+| `move`     | Move a file or folder |
+
+## Description
+
+The description should be a short description of the commit, it should be written in the imperative, present tense. For example:
+
+```bash
+# Good
+📝 update documentation contributors
+
+# Bad
+📝 updated documentation contributors
+```
+
+## Issue number
+
+If the commit is related to an issue, you can add the issue number at the end of the description, for example:
+
+```
+📝 update documentation contributors (#123)
+```
+
+## Body
+
+The body should include the motivation for the change and contrast this with previous behavior. It should be written in the imperative, present tense. For example:
+
+```bash
+# Good
+📝 update documentation contributors
+
+- Add @jerembdn as a contributor
+- Add @younesbessa as a contributor
+
+Co-authored-by: Younes Bessa <younes@onruntime.com>
+
+# Bad
+📝 update documentation contributors
+
+- Added @jerembdn as a contributor
+- Added @younesbessa as a contributor
+
+Co-authored-by: Younes Bessa <younes@onruntime.com>
+```
