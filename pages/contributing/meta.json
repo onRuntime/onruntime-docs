@@ -1,5 +1,6 @@
 {
-  "index": "Introduction",
+  "introduction": "Introduction",
+  "code-of-conduct": "Code of conduct",
   "issues": "Issues",
   "commits": "Commits",
   "pulls": "Pull requests"

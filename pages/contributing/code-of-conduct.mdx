@@ -1,0 +1,30 @@
+import { useSSG } from 'nextra/ssg';
+import Markdown from 'react-markdown';
+
+export const getStaticProps = ({ params }) => {
+  return fetch(`https://raw.githubusercontent.com/onRuntime/.github/master/.github/CODE_OF_CONDUCT.md`)
+    .then((res) => res.text())
+    .then((text) => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useSSG` hook.
+        ssg: {
+          markdown: text,
+        },
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60,
+    }))
+}
+
+export const CodeOfConduct = ({ ssg }) => {
+  const { markdown } = useSSG(ssg);
+  
+  return (
+    <Markdown>
+      {markdown}
+    </Markdown>
+  )
+}
+
+<CodeOfConduct />
