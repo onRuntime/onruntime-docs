@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-filename-extension */
-import Footer from "@components/Footer";
 import Brand from "@components/Brand";
 import urlcat from "urlcat";
 
@@ -50,9 +49,8 @@ const config = {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  floatTOC: true,
   footerEditLink: "Edit this page on GitHub",
-  footerText: <Footer />,
+  footerText: `MIT ${new Date().getFullYear()} © onRuntime Studio.`,
   feedbackLabels: "feedback",
   feedbackLink: "Feedback",
   unstable_faviconGlyph: "👋",
