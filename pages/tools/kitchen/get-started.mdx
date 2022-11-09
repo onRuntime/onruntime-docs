@@ -1,4 +1,4 @@
-import Callout from "nextra-theme-docs/callout";
+import Callout from "nextra-theme-docs";
 
 # Get Started
 
@@ -16,15 +16,19 @@ yarn add kitchen
 
 ## Getting Started
 
+<Callout type="warning" emoji="⚠️">
+  The package isn't ready yet for React.JS, it is only available on Next.JS
+</Callout>
+
 Learn the basics of working with Kitchen UI components.
 
 First you have to import the `KitchenProvider` component and wrap your application with it.
 
 ```tsx
-import React from "react";
+import * as React from "react";
 import { KitchenProvider } from "@tonightpass/kitchen";
 
-export default class MyApp {
+export default function MyApp() {
   return (
     <KitchenProvider>
       <Component {...pageProps} />
@@ -73,11 +77,11 @@ export default class MyApp {
   **Kitchen** package contains lot of React components and hooks that can be used to build your own UI components.
 </Callout>
 
-Here is a complete list of what you can cook with :
+Here is a complete list of what you can cook with us:
 
-- ### Button
+- #### Button
   <details>
-    <summary>Button</summary>
+    <summary>View how to use it!</summary>
 
     ```tsx
       import { Button } from '@tonightpass/kitchen';
