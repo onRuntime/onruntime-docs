@@ -1,80 +1,24 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
-    "moduleResolution": "node",
-    "allowJs": true,
-    "noEmit": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
+    "allowJs": false,
+    "types": ["next"],
     "paths": {
-      "@static/*": [
-        "./public/static/*"
-      ],
-      "@components/*": [
-        "./components/*"
-      ],
-      "@data/*": [
-        "./data/*"
-      ],
-      "@queries/*": [
-        "./queries/*"
-      ],
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@screens/*": [
-        "./screens/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@hoc/*": [
-        "./hoc/*"
-      ],
-      "@constants/*": [
-        "./constants/*"
-      ],
-      "@services/*": [
-        "./services/*"
-      ],
-      "@stores/*": [
-        "./stores/*"
-      ],
-      "@context/*": [
-        "./context/*"
-      ],
-      "@typeDefs/*": [
-        "./types/*"
-      ],
-      "@utils/*": [
-        "./utils/*"
-      ]
-    },
+      "@components/*": ["./components/*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "theme.config.ts"  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

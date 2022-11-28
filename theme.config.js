@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
 import Brand from "@components/Brand";
-import NotFound from "@components/NotFound";
 import urlcat from "urlcat";
 
 /**
