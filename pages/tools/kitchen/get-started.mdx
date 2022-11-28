@@ -1,0 +1,78 @@
+import { Callout } from "nextra-theme-docs";
+
+# Get Started
+
+## Installation
+
+Installing `kitchen` only takes a single command and is as easy as:
+
+```bash
+# with npm
+npm install kitchen
+
+# with yarn
+yarn add kitchen
+```
+
+## Getting Started
+
+<Callout type="warning" emoji="⚠️">
+  The package isn't ready yet for React.JS, it is only available on Next.JS
+</Callout>
+
+Learn the basics of working with Kitchen UI components.
+
+First you have to import the `KitchenProvider` component and wrap your application with it.
+
+```tsx
+import * as React from "react";
+import { KitchenProvider } from "@tonightpass/kitchen";
+
+export default function MyApp() {
+  return (
+    <KitchenProvider>
+      <Component {...pageProps} />
+    </KitchenProvider>
+  );
+};
+```
+
+<details>
+  <summary>If you are on **Next.JS**, then you need to set up some additional things:</summary>
+  First, you will need to go to your `next.config.js` file and add the following:
+
+  ```js
+  // next.config.js
+  const { withKitchen } = require("@tonightpass/kitchen");
+
+  module.exports = withKitchen({ ...customConfig });
+  ```
+
+  Then you will need to go to your `_document.tsx` file and import the `KitchenDocument`, then extend your Document class with it.
+
+  ```tsx
+  // _document.tsx
+  import Document, { Html, Head, Main, NextScript } from "next/document";
+  import { KitchenDocument } from "@tonightpass/kitchen";
+
+  export default class MyDocument extends KitchenDocument {
+    render() {
+      return (
+        <Html lang="en">
+          <Head />
+          <body>
+            <Main />
+            <NextScript />
+          </body>
+        </Html>
+      );
+    }
+  }
+  ```
+</details>
+
+## Toolkit
+
+<Callout emoji="🥘">
+  **Kitchen** package contains lot of React components and hooks that can be used to build your own UI components.
+</Callout>

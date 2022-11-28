@@ -1,0 +1,44 @@
+# Button
+**Use Kitchen's custom button with support for multiple sizes, states, and more.**
+
+## Import
+```tsx
+import { Button, ButtonGroup } from '@tonightpass/kitchen';
+```
+- **Button:** The button component with support for custom icons, spinners, etc.
+- **ButtonGroup:** Used to group buttons whose actions are related, with an option to flush them together.
+
+## Usage
+Kitchen includes several predefined button types, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+... Examples ...
+```tsx
+import { Button } from '@tonightpass/kitchen/button';
+
+render(
+  <Button>Default</Button>
+  <Button primary>Primary</Button>
+  <Button secondary>Secondary</Button>
+  <Button success>Success</Button>
+  <Button warning>Warning</Button>
+  <Button danger>Danger</Button>
+  <Button info>Info</Button>
+  <Button light>Light</Button>
+  <Button dark>Dark</Button>
+  <Button link>Link</Button>
+);
+```
+
+### Button sizes
+Use the `size` prop to change the size of the button. You can set the value to ...
+
+... Examples ...
+```tsx
+import { Button } from '@tonightpass/kitchen/button';
+
+render(
+  <Button>Default</Button>
+  <Button size="small">Small</Button>
+  <Button size="large">Large</Button>
+);
+```

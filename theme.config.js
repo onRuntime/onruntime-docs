@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-filename-extension */
-import Footer from "@components/Footer";
 import Brand from "@components/Brand";
 import urlcat from "urlcat";
 
@@ -7,14 +6,18 @@ import urlcat from "urlcat";
  * @type {import("./theme").DocsThemeConfig}
  */
 const config = {
-  github: "https://github.com/onRuntime/onruntime-docs",
+  project: {
+    link: "https://github.com/onRuntime/onruntime-docs",
+  },
+  chat: {
+    link: "https://discord.gg/ucX9c5yXmX",
+  },
   docsRepositoryBase: "https://github.com/onRuntime/onruntime-docs/blob/master",
   titleSuffix: " | onRuntime Studio",
-  projectChatLink: "https://discord.gg/ucX9c5yXmX",
   logo: <Brand />,
   head: ({ title = "onRuntime Studio", meta }) => {
     const description =
-      meta.description ||
+      (meta && meta.description) ||
       "Studio that brings together teams of creators and develops applications, website and game platforms.";
 
     const ogImage = urlcat(`https://og-image.onruntime.com/${title}.jpeg`, {
@@ -45,17 +48,20 @@ const config = {
       </>
     );
   },
-  search: true,
-  defaultMenuCollapsed: true,
-  prevLinks: true,
-  nextLinks: true,
-  footer: true,
-  floatTOC: true,
-  footerEditLink: "Edit this page on GitHub",
-  footerText: <Footer />,
-  feedbackLabels: "feedback",
-  feedbackLink: "Feedback",
-  unstable_faviconGlyph: "👋",
+  navigation: false,
+  sidebar: {
+    defaultMenuCollapseLevel: true,
+  },
+  feedback: {
+    labels: "feedback",
+  },
+  footer: {
+    text: `MIT ${new Date().getFullYear()} © onRuntime Studio.`,
+  },
+  editLink: {
+    text: "Edit this page on GitHub",
+  },
+  faviconGlyph: "👋",
   unstable_flexsearch: true,
 };
 
