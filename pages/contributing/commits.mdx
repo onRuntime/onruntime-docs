@@ -1,7 +1,7 @@
 import { useSSG } from 'nextra/ssg'
 
 export const getStaticProps = ({ params }) => {
-  return fetch(`https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json`)
+  return fetch(`https://raw.githubusercontent.com/carloscuesta/gitmoji/master/packages/gitmojis/src/gitmojis.json`)
     .then((res) => res.json())
     .then((data) => ({
       props: {
