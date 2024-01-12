@@ -13,7 +13,7 @@
     "@reach/skip-nav": "^0.18.0",
     "@types/styled-components": "^5.1.26",
     "next": "^12.1.6",
-    "next-seo": "^5.5.0",
+    "next-seo": "^6.0.0",
     "nextra": "2.0.0-alpha.56",
     "nextra-theme-docs": "2.0.0-alpha.59",
     "react": "^18.2.0",
