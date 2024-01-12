@@ -3449,6 +3449,13 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qs@^6.9.4:
+  version "6.11.2"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.2.tgz#64bea51f12c1f5da1bc01496f48ffcff7c69d7d9"
+  integrity sha512-tDNIz22aBzCDxLtVH++VnTfzxlfeK5CbqohpSqpJgj1Wg/cQbStNAz3NuqCs5vV+pjBsK4x4pN9HlVh7rcYRiA==
+  dependencies:
+    side-channel "^1.0.4"
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
@@ -4120,10 +4127,12 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-urlcat@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/urlcat/-/urlcat-2.0.4.tgz#c119b4e3b31df4d140e77e177ea5d95dbe6b2fe2"
-  integrity sha512-12c4Vi40DHVdZ/8mOLjZjp0asCzM6hi8Gj116fpImRP1FN4gBMCtMi9XhLNOmre/FEQYNqHbZmX8iyYAtIcy8Q==
+urlcat@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/urlcat/-/urlcat-3.1.0.tgz#66ef2eafea2236b8765c40aa7536969c674e7738"
+  integrity sha512-qY6b94/aGMIHh70EEQ/4hfR2LUGZ+fPQNp64cf7yRX9kAp4XG2tx7LgYUU1Qkh17bFylME0u4n3lOezonougPw==
+  dependencies:
+    qs "^6.9.4"
 
 use-sync-external-store@1.2.0:
   version "1.2.0"
