@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.0",
     "styled-components": "^5.3.5",
-    "urlcat": "^2.0.4"
+    "urlcat": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
