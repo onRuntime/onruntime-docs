@@ -1,20 +1,17 @@
-/* eslint-disable react/jsx-filename-extension */
-import Footer from "@components/Footer";
-import Brand from "@components/Brand";
 import urlcat from "urlcat";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
-/**
- * @type {import("./theme").DocsThemeConfig}
- */
-const config = {
-  github: "https://github.com/onRuntime/onruntime-docs",
+const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/onRuntime/onruntime-docs/blob/master",
-  titleSuffix: " | onRuntime Studio",
-  projectChatLink: "https://discord.gg/ucX9c5yXmX",
-  logo: <Brand />,
-  head: ({ title = "onRuntime Studio", meta }) => {
+  logo: <span>onRuntime</span>,
+  head: function useHead() {
+    const config = useConfig();
+    const {
+      title,
+      frontMatter: { meta },
+    } = config;
     const description =
-      meta.description ||
+      meta?.description ||
       "Studio that brings together teams of creators and develops applications, website and game platforms.";
 
     const ogImage = urlcat(`https://og-image.onruntime.com/${title}.jpeg`, {
@@ -45,18 +42,6 @@ const config = {
       </>
     );
   },
-  search: true,
-  defaultMenuCollapsed: true,
-  prevLinks: true,
-  nextLinks: true,
-  footer: true,
-  floatTOC: true,
-  footerEditLink: "Edit this page on GitHub",
-  footerText: <Footer />,
-  feedbackLabels: "feedback",
-  feedbackLink: "Feedback",
-  unstable_faviconGlyph: "👋",
-  unstable_flexsearch: true,
 };
 
 export default config;

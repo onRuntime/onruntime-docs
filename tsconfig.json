@@ -3,10 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
@@ -25,56 +22,22 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@static/*": [
-        "./public/static/*"
-      ],
-      "@components/*": [
-        "./components/*"
-      ],
-      "@data/*": [
-        "./data/*"
-      ],
-      "@queries/*": [
-        "./queries/*"
-      ],
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@screens/*": [
-        "./screens/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@hoc/*": [
-        "./hoc/*"
-      ],
-      "@constants/*": [
-        "./constants/*"
-      ],
-      "@services/*": [
-        "./services/*"
-      ],
-      "@stores/*": [
-        "./stores/*"
-      ],
-      "@context/*": [
-        "./context/*"
-      ],
-      "@typeDefs/*": [
-        "./types/*"
-      ],
-      "@utils/*": [
-        "./utils/*"
-      ]
-    },
+      "@static/*": ["./public/static/*"],
+      "@components/*": ["./components/*"],
+      "@data/*": ["./data/*"],
+      "@queries/*": ["./queries/*"],
+      "@styles/*": ["./styles/*"],
+      "@screens/*": ["./screens/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@hoc/*": ["./hoc/*"],
+      "@constants/*": ["./constants/*"],
+      "@services/*": ["./services/*"],
+      "@stores/*": ["./stores/*"],
+      "@context/*": ["./context/*"],
+      "@typeDefs/*": ["./types/*"],
+      "@utils/*": ["./utils/*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "theme.config.ts"  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

@@ -11,17 +11,12 @@
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "@onruntime/next-link": "^0.1.5",
-    "@reach/skip-nav": "^0.18.0",
-    "@types/styled-components": "^5.1.26",
     "next": "^12.1.6",
-    "next-seo": "^6.0.0",
-    "nextra": "2.0.0-alpha.56",
-    "nextra-theme-docs": "2.0.0-alpha.59",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^9.0.0",
-    "styled-components": "^5.3.5",
+    "react-markdown": "^9.0.1",
     "urlcat": "^3.0.0"
   },
   "devDependencies": {
