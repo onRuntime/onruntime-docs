@@ -11,7 +11,7 @@
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "^12.1.6",
+    "next": "^15.0.0",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
     "react": "^18.2.0",
@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "^5.33.1",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.22.0",
-    "eslint-config-next": "^14.0.0",
+    "eslint-config-next": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-mdx": "^3.0.0",
     "eslint-plugin-prettier": "^5.0.0",
